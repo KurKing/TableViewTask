@@ -11,7 +11,8 @@ struct DataModel {
     let avatarImage: UIImage
     
     let image: UIImage?
-    let statusImage: UIImage?
+    
+    let status: String?
     
     let nickName: String
     let text: String

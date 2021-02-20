@@ -8,28 +8,40 @@
 import UIKit
 
 class ViewController: UITableViewController, LikeButtonPressed {
-    private(set) var data = [DataModel]()
-
+    private var data = [
+        DataModel(
+            avatarImage: UIImage(named: "catAvatar1")!,
+            image: nil,
+            status: nil,
+            nickName: "Bella",
+            text: "Lorem ipsum dolor sit amet",
+            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr", likesCount: Int.random(in: 0...999)),
+        DataModel(
+            avatarImage: UIImage(named: "catAvatar2")!,
+            image: nil,
+            status: "😺",
+            nickName: "Leo",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr", likesCount: Int.random(in: 0...999)),
+        DataModel(
+            avatarImage: UIImage(named: "catAvatar3")!,
+            image: UIImage(named: "anImage")!,
+            status: nil,
+            nickName: "Charlie",
+            text: "Lorem ipsum dolor sit amet",
+            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr", likesCount: Int.random(in: 0...999))
+    ]
+    
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: "simpleCell")
         tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: "imageCell")
+        tableView.register(ReactionTableViewCell.self, forCellReuseIdentifier: "reactionCell")
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "bg")!)
         tableView.separatorStyle = .none
-        
-        for i in [nil, UIImage(named: "anImage")!,nil, UIImage(named: "anImage")!] {
-            data.append(
-                DataModel(
-                    avatarImage: UIImage(named: "catAvatar\(Int.random(in: 1...5))")!,
-                    image: i,
-                    statusImage: nil,
-                    nickName: "KurKing",
-                    text: "Lorem ipsum dolor sit amet",
-                    time: "12:45 Uhr", likesCount: Int.random(in: 0...999))
-            )
-        }
 
         tableView.delaysContentTouches = false
     }
@@ -41,7 +53,14 @@ class ViewController: UITableViewController, LikeButtonPressed {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if data[indexPath.row].image == nil {
+        if data[indexPath.row].status != nil {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reactionCell", for: indexPath) as! SimpleTableViewCell
+            
+            cell.setup(with: data[indexPath.row], index: indexPath.row)
+            cell.delagate = self
+
+            return cell
+        } else if data[indexPath.row].image == nil {
             let cell = tableView.dequeueReusableCell(withIdentifier: "simpleCell", for: indexPath) as! SimpleTableViewCell
             
             cell.setup(with: data[indexPath.row], index: indexPath.row)

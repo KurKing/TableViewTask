@@ -26,8 +26,6 @@ class SimpleTableViewCell: UITableViewCell {
         imageView.layer.cornerRadius = 20
         imageView.clipsToBounds = true
         
-        imageView.layer.shadowOpacity = 0.6
-        
         return imageView
     }()
     
@@ -195,7 +193,6 @@ class SimpleTableViewCell: UITableViewCell {
         isUserInteractionEnabled = true
         
         addShadow(to: self, opacity: 0.4, x: 2, y: 3, radius: 6)
-        addShadow(to: avatar, opacity: 1, x: 2, y: 3, radius: 10)
         
         addSubviews()
         addConstraints()

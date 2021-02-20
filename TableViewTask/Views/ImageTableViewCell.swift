@@ -42,17 +42,4 @@ class ImageTableViewCell: SimpleTableViewCell{
         super.addSubviews()
         backgroundCellView.addSubview(bigImageView)
     }
-
-    override func setupUI() {
-        selectionStyle = .none
-        backgroundColor = .clear
-        isUserInteractionEnabled = true
-
-        addShadow(to: self, opacity: 0.4, x: 2, y: 3, radius: 6)
-
-        addSubviews()
-        addConstraints()
-
-        likeButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
-    }
 }

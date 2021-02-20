@@ -172,7 +172,15 @@ class SimpleTableViewCell: UITableViewCell {
         nickNameLabel.text = model.nickName
         dateLabel.text = model.time
         messageTextLabel.text = model.text
-        likeLabel.text = "\(model.likesCount)"
+        
+        if model.likesCount > 1000000 {
+            likeLabel.text = "\(round(Double(model.likesCount)/100000.0)/10.0)M"
+        } else if model.likesCount > 1000 {
+            likeLabel.text = "\(round(Double(model.likesCount)/100.0)/10.0)k"
+        } else {
+            likeLabel.text = "\(model.likesCount)"
+        }
+        
         
         self.index = index
     }

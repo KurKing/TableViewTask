@@ -15,21 +15,26 @@ class ViewController: UITableViewController, LikeButtonPressed {
             status: nil,
             nickName: "Bella",
             text: "Lorem ipsum dolor sit amet",
-            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr", likesCount: Int.random(in: 0...999)),
+            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
+            likesCount: Int.random(in: 0...999)),
         DataModel(
             avatarImage: UIImage(named: "catAvatar2")!,
             image: nil,
             status: "😺",
             nickName: "Leo",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr", likesCount: Int.random(in: 0...999)),
+            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
+            likesCount: 1234
+        ),
         DataModel(
             avatarImage: UIImage(named: "catAvatar3")!,
             image: UIImage(named: "anImage")!,
             status: nil,
             nickName: "Charlie",
             text: "Lorem ipsum dolor sit amet",
-            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr", likesCount: Int.random(in: 0...999))
+            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
+            likesCount: 2000000
+        )
     ]
     
     //MARK: - viewDidLoad

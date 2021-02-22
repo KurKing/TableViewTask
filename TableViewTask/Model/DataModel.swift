@@ -8,7 +8,7 @@
 import UIKit
 
 struct DataModel {
-    let avatarImage: UIImage
+    let avatarImage: UIImage?
     
     let image: UIImage?
     

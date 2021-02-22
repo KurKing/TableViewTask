@@ -10,7 +10,7 @@ import SnapKit
 
 class SimpleTableViewCell: UITableViewCell {
     
-    var index: Int!
+    var index: Int?
     weak var delagate: LikeButtonPressed?
 
     //MARK: - Subviews
@@ -193,7 +193,9 @@ class SimpleTableViewCell: UITableViewCell {
     }
     
     @objc func buttonPressed(_ sender: UIButton){
-        delagate?.likeButtonPressed(with: index)
+        if let index = index {
+            delagate?.likeButtonPressed(with: index)
+        }
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

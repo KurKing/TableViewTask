@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UITableViewController, LikeButtonPressed {
     var data = [
         DataModel(
-            avatarImage: UIImage(named: "catAvatar1")!,
+            avatarImage: UIImage(named: "catAvatar1"),
             image: nil,
             status: nil,
             nickName: "Bella",
@@ -18,7 +18,7 @@ class ViewController: UITableViewController, LikeButtonPressed {
             time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
             likesCount: Int.random(in: 0...999)),
         DataModel(
-            avatarImage: UIImage(named: "catAvatar2")!,
+            avatarImage: UIImage(named: "catAvatar2"),
             image: nil,
             status: "😺",
             nickName: "Leo",
@@ -27,8 +27,8 @@ class ViewController: UITableViewController, LikeButtonPressed {
             likesCount: 1234
         ),
         DataModel(
-            avatarImage: UIImage(named: "catAvatar3")!,
-            image: UIImage(named: "anImage")!,
+            avatarImage: UIImage(named: "catAvatar3"),
+            image: UIImage(named: "anImage"),
             status: nil,
             nickName: "Charlie",
             text: "Lorem ipsum dolor sit amet",
@@ -44,7 +44,9 @@ class ViewController: UITableViewController, LikeButtonPressed {
         tableView.registerCell(ImageTableViewCell.self)
         tableView.registerCell(ReactionTableViewCell.self)
         
-        tableView.backgroundView = UIImageView(image: UIImage(named: "bg")!)
+        if let backgroundImage = UIImage(named: "bg"){
+            tableView.backgroundView = UIImageView(image: backgroundImage)
+        }
         tableView.separatorStyle = .none
 
         tableView.delaysContentTouches = false

@@ -10,7 +10,10 @@ import SnapKit
 
 class SimpleTableViewCell: UITableViewCell {
     
-    //MARK: - backgroundCellView
+    var index: Int!
+    weak var delagate: LikeButtonPressed?
+
+    //MARK: - Subviews
     let backgroundCellView: UIView = {
         let uiView = UIView()
         uiView.layer.cornerRadius = 10
@@ -19,8 +22,7 @@ class SimpleTableViewCell: UITableViewCell {
         
         return uiView
     }()
-    
-    //MARK: - Avatar image
+
     let avatar: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 20
@@ -28,8 +30,7 @@ class SimpleTableViewCell: UITableViewCell {
         
         return imageView
     }()
-    
-    //MARK: - NickName label
+
     let nickNameLabel: UILabel = {
         let label = UILabel()
         
@@ -39,8 +40,7 @@ class SimpleTableViewCell: UITableViewCell {
         
         return label
     }()
-    
-    //MARK: - Date label
+
     let dateLabel: UILabel = {
         let label = UILabel()
         
@@ -49,15 +49,13 @@ class SimpleTableViewCell: UITableViewCell {
         
         return label
     }()
-    
-    //MARK: - Separator line
+
     let separatorLine: UIView = {
         let view = UIView()
         view.backgroundColor = .gray
         return view
     }()
-    
-    //MARK: - messageTextLabel
+
     let messageTextLabel: UILabel = {
         let label = UILabel()
         
@@ -69,8 +67,7 @@ class SimpleTableViewCell: UITableViewCell {
         
         return label
     }()
-    
-    //MARK: - Like button
+
     let likeButton: UIButton = {
         let button = UIButton(type: .system)
         
@@ -79,8 +76,7 @@ class SimpleTableViewCell: UITableViewCell {
         
         return button
     }()
-    
-    //MARK: - Like label
+
     let likeLabel: UILabel = {
         let label = UILabel()
         
@@ -144,8 +140,7 @@ class SimpleTableViewCell: UITableViewCell {
             $0.trailing.equalToSuperview().offset(-15)
         }
     }
-    
-    //MARK: - Shadow
+
     func addShadow(to view: UIView, opacity: Float, x: Int, y: Int, radius: CGFloat){
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = opacity
@@ -153,20 +148,7 @@ class SimpleTableViewCell: UITableViewCell {
         view.layer.shadowRadius = radius
     }
     
-    //MARK: - AddSubViews
-    func addSubviews(){
-        contentView.addSubview(backgroundCellView)
-        
-        backgroundCellView.addSubview(avatar)
-        backgroundCellView.addSubview(nickNameLabel)
-        backgroundCellView.addSubview(dateLabel)
-        backgroundCellView.addSubview(separatorLine)
-        backgroundCellView.addSubview(messageTextLabel)
-        backgroundCellView.addSubview(likeLabel)
-        backgroundCellView.addSubview(likeButton)
-    }
-    
-    //MARK: - Setter
+    //MARK: - Setup functions
     func setup(with model: DataModel, index: Int){
         avatar.image = model.avatarImage
         nickNameLabel.text = model.nickName
@@ -185,16 +167,18 @@ class SimpleTableViewCell: UITableViewCell {
         self.index = index
     }
     
-    var index: Int!
-    
-    //MARK: - Delegate
-    weak var delagate: LikeButtonPressed?
-    
-    @objc func buttonPressed(_ sender: UIButton){
-        delagate?.likeButtonPressed(with: index)
+    func addSubviews(){
+        contentView.addSubview(backgroundCellView)
+        
+        backgroundCellView.addSubview(avatar)
+        backgroundCellView.addSubview(nickNameLabel)
+        backgroundCellView.addSubview(dateLabel)
+        backgroundCellView.addSubview(separatorLine)
+        backgroundCellView.addSubview(messageTextLabel)
+        backgroundCellView.addSubview(likeLabel)
+        backgroundCellView.addSubview(likeButton)
     }
-    
-    //MARK: - SetupUI
+
     func setupUI(){
         selectionStyle = .none
         backgroundColor = .clear
@@ -208,10 +192,12 @@ class SimpleTableViewCell: UITableViewCell {
         likeButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
     }
     
-    //MARK: - init
+    @objc func buttonPressed(_ sender: UIButton){
+        delagate?.likeButtonPressed(with: index)
+    }
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         setupUI()
     }
     

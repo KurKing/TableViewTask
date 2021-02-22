@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController, LikeButtonPressed {
-    private var data = [
+    var data = [
         DataModel(
             avatarImage: UIImage(named: "catAvatar1")!,
             image: nil,
@@ -37,7 +37,6 @@ class ViewController: UITableViewController, LikeButtonPressed {
         )
     ]
     
-    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,8 +49,15 @@ class ViewController: UITableViewController, LikeButtonPressed {
 
         tableView.delaysContentTouches = false
     }
-    
-    //MARK: - delegate/data source
+
+    func likeButtonPressed(with index: Int) {
+        data[index].likesCount += 1
+        tableView.reloadData()
+    }
+}
+
+//MARK: - DataSource
+extension ViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -81,10 +87,6 @@ class ViewController: UITableViewController, LikeButtonPressed {
             return cell
         }
     }
-    
-    //MARK: - LikeButtonPressed
-    func likeButtonPressed(with index: Int) {
-        data[index].likesCount += 1
-        tableView.reloadData()
-    }
 }
+
+

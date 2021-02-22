@@ -12,6 +12,8 @@
 		D2451A0D25E1802C0066E528 /* LikeButtonPressedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */; };
 		D2451A1725E194F50066E528 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A1625E194F50066E528 /* ImageTableViewCell.swift */; };
 		D2451A1B25E1A0DD0066E528 /* ReactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A1A25E1A0DD0066E528 /* ReactionTableViewCell.swift */; };
+		D2451A1E25E390590066E528 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A1D25E390590066E528 /* UITableViewExtension.swift */; };
+		D2451A2125E390870066E528 /* ReuseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A2025E390870066E528 /* ReuseViewProtocol.swift */; };
 		D2598A8F25E101F700D397D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2598A8E25E101F700D397D8 /* AppDelegate.swift */; };
 		D2598A9125E101F700D397D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2598A9025E101F700D397D8 /* SceneDelegate.swift */; };
 		D2598A9325E101F700D397D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2598A9225E101F700D397D8 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonPressedProtocol.swift; sourceTree = "<group>"; };
 		D2451A1625E194F50066E528 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		D2451A1A25E1A0DD0066E528 /* ReactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTableViewCell.swift; sourceTree = "<group>"; };
+		D2451A1D25E390590066E528 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		D2451A2025E390870066E528 /* ReuseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseViewProtocol.swift; sourceTree = "<group>"; };
 		D2598A8B25E101F700D397D8 /* TableViewTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2598A8E25E101F700D397D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2598A9025E101F700D397D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */,
+				D2451A2025E390870066E528 /* ReuseViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D2598A9225E101F700D397D8 /* ViewController.swift */,
+				D2451A1D25E390590066E528 /* UITableViewExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -270,8 +276,10 @@
 				D2598AB125E1051F00D397D8 /* SimpleTableViewCell.swift in Sources */,
 				D2451A0D25E1802C0066E528 /* LikeButtonPressedProtocol.swift in Sources */,
 				D2598A8F25E101F700D397D8 /* AppDelegate.swift in Sources */,
+				D2451A1E25E390590066E528 /* UITableViewExtension.swift in Sources */,
 				D2451A1B25E1A0DD0066E528 /* ReactionTableViewCell.swift in Sources */,
 				D2598A9125E101F700D397D8 /* SceneDelegate.swift in Sources */,
+				D2451A2125E390870066E528 /* ReuseViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

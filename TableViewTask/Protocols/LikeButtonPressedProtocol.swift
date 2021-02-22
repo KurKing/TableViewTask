@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LikeButtonPressed {
+protocol LikeButtonPressed: class {
     func likeButtonPressed(with index: Int)
 }

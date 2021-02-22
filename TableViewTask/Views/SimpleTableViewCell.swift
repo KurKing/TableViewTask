@@ -188,7 +188,7 @@ class SimpleTableViewCell: UITableViewCell {
     var index: Int!
     
     //MARK: - Delegate
-    var delagate: LikeButtonPressed?
+    weak var delagate: LikeButtonPressed?
     
     @objc func buttonPressed(_ sender: UIButton){
         delagate?.likeButtonPressed(with: index)

@@ -40,10 +40,10 @@ class ViewController: UITableViewController, LikeButtonPressed {
     //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(SimpleTableViewCell.self, forCellReuseIdentifier: "simpleCell")
-        tableView.register(ImageTableViewCell.self, forCellReuseIdentifier: "imageCell")
-        tableView.register(ReactionTableViewCell.self, forCellReuseIdentifier: "reactionCell")
+
+        tableView.registerCell(SimpleTableViewCell.self)
+        tableView.registerCell(ImageTableViewCell.self)
+        tableView.registerCell(ReactionTableViewCell.self)
         
         tableView.backgroundView = UIImageView(image: UIImage(named: "bg")!)
         tableView.separatorStyle = .none
@@ -59,21 +59,21 @@ class ViewController: UITableViewController, LikeButtonPressed {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if data[indexPath.row].status != nil {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "reactionCell", for: indexPath) as! SimpleTableViewCell
+            let cell: ReactionTableViewCell = tableView.dequeueReusableCell()
             
             cell.setup(with: data[indexPath.row], index: indexPath.row)
             cell.delagate = self
 
             return cell
         } else if data[indexPath.row].image == nil {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "simpleCell", for: indexPath) as! SimpleTableViewCell
+            let cell: SimpleTableViewCell = tableView.dequeueReusableCell()
             
             cell.setup(with: data[indexPath.row], index: indexPath.row)
             cell.delagate = self
 
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! SimpleTableViewCell
+            let cell: ImageTableViewCell = tableView.dequeueReusableCell()
             
             cell.setup(with: data[indexPath.row], index: indexPath.row)
             cell.delagate = self

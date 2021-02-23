@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController, LikeButtonPressed {
-    var data = [
+    private(set) var data = [
         DataModel(
             avatarImage: UIImage(named: "catAvatar1"),
             image: nil,

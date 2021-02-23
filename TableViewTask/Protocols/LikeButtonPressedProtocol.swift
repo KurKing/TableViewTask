@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LikeButtonPressed: class {
-    func likeButtonPressed(with index: Int)
+    func likeButtonPressed(index: IndexPath)
 }

@@ -18,8 +18,8 @@ class ImageTableViewCell: SimpleTableViewCell{
         return imageView
     }()
 
-    override func setup(with model: DataModel, index: Int) {
-        super.setup(with: model, index: index)
+    override func setup(model: DataModel, index: IndexPath) {
+        super.setup(model: model, index: index)
         if let image = model.image {
             bigImageView.image = image
         }

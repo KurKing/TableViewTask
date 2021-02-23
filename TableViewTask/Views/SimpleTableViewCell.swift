@@ -10,7 +10,7 @@ import SnapKit
 
 class SimpleTableViewCell: UITableViewCell {
     
-    var index: Int?
+    var index: IndexPath?
     weak var delagate: LikeButtonPressed?
 
     //MARK: - Subviews
@@ -149,7 +149,7 @@ class SimpleTableViewCell: UITableViewCell {
     }
     
     //MARK: - Setup functions
-    func setup(with model: DataModel, index: Int){
+    func setup(model: DataModel, index: IndexPath){
         avatar.image = model.avatarImage
         nickNameLabel.text = model.nickName
         dateLabel.text = model.time
@@ -194,7 +194,7 @@ class SimpleTableViewCell: UITableViewCell {
     
     @objc func buttonPressed(_ sender: UIButton){
         if let index = index {
-            delagate?.likeButtonPressed(with: index)
+            delagate?.likeButtonPressed(index: index)
         }
     }
 

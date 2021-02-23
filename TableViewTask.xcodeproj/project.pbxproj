@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5C24F60B32A632C1F3BEEC4A /* Pods_TableViewTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54FF552EAE3D74FA94029771 /* Pods_TableViewTask.framework */; };
+		D242C68325E4FF1D00215AE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242C68225E4FF1D00215AE5 /* Constants.swift */; };
 		D2451A0925E10FAE0066E528 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A0825E10FAE0066E528 /* DataModel.swift */; };
 		D2451A0D25E1802C0066E528 /* LikeButtonPressedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */; };
 		D2451A1725E194F50066E528 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A1625E194F50066E528 /* ImageTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 		3E23E747D365B8A6BF455621 /* Pods-TableViewTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewTask.debug.xcconfig"; path = "Target Support Files/Pods-TableViewTask/Pods-TableViewTask.debug.xcconfig"; sourceTree = "<group>"; };
 		54FF552EAE3D74FA94029771 /* Pods_TableViewTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableViewTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA74CA45DC789798D7BB9F6D /* Pods-TableViewTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableViewTask.release.xcconfig"; path = "Target Support Files/Pods-TableViewTask/Pods-TableViewTask.release.xcconfig"; sourceTree = "<group>"; };
+		D242C68225E4FF1D00215AE5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D2451A0825E10FAE0066E528 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonPressedProtocol.swift; sourceTree = "<group>"; };
 		D2451A1625E194F50066E528 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				D2598A9725E101FB00D397D8 /* Assets.xcassets */,
 				D2598A9925E101FB00D397D8 /* LaunchScreen.storyboard */,
+				D242C68225E4FF1D00215AE5 /* Constants.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				D2598A9325E101F700D397D8 /* ViewController.swift in Sources */,
 				D2598AB125E1051F00D397D8 /* SimpleTableViewCell.swift in Sources */,
 				D2451A0D25E1802C0066E528 /* LikeButtonPressedProtocol.swift in Sources */,
+				D242C68325E4FF1D00215AE5 /* Constants.swift in Sources */,
 				D2598A8F25E101F700D397D8 /* AppDelegate.swift in Sources */,
 				D2451A1E25E390590066E528 /* UITableViewExtension.swift in Sources */,
 				D2451A1B25E1A0DD0066E528 /* ReactionTableViewCell.swift in Sources */,

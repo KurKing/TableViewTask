@@ -7,8 +7,8 @@
 
 import UIKit
 
-class ViewController: UITableViewController, LikeButtonPressed {
-    private(set) var data = [
+class ViewController: UITableViewController {
+    fileprivate(set) var data = [
         DataModel(
             avatarImage: UIImage(named: "catAvatar1"),
             image: nil,
@@ -51,10 +51,13 @@ class ViewController: UITableViewController, LikeButtonPressed {
 
         tableView.delaysContentTouches = false
     }
+}
 
-    func likeButtonPressed(with index: Int) {
-        data[index].likesCount += 1
-        tableView.reloadData()
+//MARK: - LikeButtonPressed
+extension ViewController: LikeButtonPressed {
+    func likeButtonPressed(index: IndexPath) {
+        data[index.row].likesCount += 1
+        tableView.reloadRows(at: [index], with: .none)
     }
 }
 
@@ -69,21 +72,21 @@ extension ViewController {
         if data[indexPath.row].status != nil {
             let cell: ReactionTableViewCell = tableView.dequeueReusableCell()
             
-            cell.setup(with: data[indexPath.row], index: indexPath.row)
+            cell.setup(model: data[indexPath.row], index: indexPath)
             cell.delagate = self
 
             return cell
         } else if data[indexPath.row].image == nil {
             let cell: SimpleTableViewCell = tableView.dequeueReusableCell()
             
-            cell.setup(with: data[indexPath.row], index: indexPath.row)
+            cell.setup(model: data[indexPath.row], index: indexPath)
             cell.delagate = self
 
             return cell
         } else {
             let cell: ImageTableViewCell = tableView.dequeueReusableCell()
             
-            cell.setup(with: data[indexPath.row], index: indexPath.row)
+            cell.setup(model: data[indexPath.row], index: indexPath)
             cell.delagate = self
 
             return cell

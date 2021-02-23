@@ -12,7 +12,7 @@ struct DataModel {
     
     let image: UIImage?
     
-    let status: String?
+    let reaction: String?
     
     let nickName: String
     let text: String

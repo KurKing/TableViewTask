@@ -47,6 +47,8 @@ class SimpleTableViewCell: UITableViewCell {
     func setupUI(){
         cellBackgroundView.layer.cornerRadius = Constants.cellCornerRadius
         addShadow(view: cellBackgroundView, opacity: 0.4, x: 2, y: 3, radius: 6)
+        
+        avatarImage.layer.cornerRadius = avatarImage.bounds.height / 2
     }
     
     func addShadow(view: UIView, opacity: Float, x: Int, y: Int, radius: CGFloat){

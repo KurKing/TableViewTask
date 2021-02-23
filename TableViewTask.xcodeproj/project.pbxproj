@@ -11,6 +11,10 @@
 		D242C68325E4FF1D00215AE5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242C68225E4FF1D00215AE5 /* Constants.swift */; };
 		D242C69025E5278C00215AE5 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242C68E25E5278C00215AE5 /* SimpleTableViewCell.swift */; };
 		D242C69125E5278C00215AE5 /* SimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D242C68F25E5278C00215AE5 /* SimpleTableViewCell.xib */; };
+		D242C6BB25E5451F00215AE5 /* ReactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242C6B925E5451F00215AE5 /* ReactionTableViewCell.swift */; };
+		D242C6BC25E5451F00215AE5 /* ReactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D242C6BA25E5451F00215AE5 /* ReactionTableViewCell.xib */; };
+		D242C6C025E5494000215AE5 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D242C6BE25E5494000215AE5 /* ImageTableViewCell.swift */; };
+		D242C6C125E5494000215AE5 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D242C6BF25E5494000215AE5 /* ImageTableViewCell.xib */; };
 		D2451A0925E10FAE0066E528 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A0825E10FAE0066E528 /* DataModel.swift */; };
 		D2451A0D25E1802C0066E528 /* LikeButtonPressedProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */; };
 		D2451A1E25E390590066E528 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2451A1D25E390590066E528 /* UITableViewExtension.swift */; };
@@ -29,6 +33,10 @@
 		D242C68225E4FF1D00215AE5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D242C68E25E5278C00215AE5 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		D242C68F25E5278C00215AE5 /* SimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTableViewCell.xib; sourceTree = "<group>"; };
+		D242C6B925E5451F00215AE5 /* ReactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionTableViewCell.swift; sourceTree = "<group>"; };
+		D242C6BA25E5451F00215AE5 /* ReactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReactionTableViewCell.xib; sourceTree = "<group>"; };
+		D242C6BE25E5494000215AE5 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		D242C6BF25E5494000215AE5 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		D2451A0825E10FAE0066E528 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonPressedProtocol.swift; sourceTree = "<group>"; };
 		D2451A1D25E390590066E528 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
@@ -102,6 +110,10 @@
 			children = (
 				D242C68E25E5278C00215AE5 /* SimpleTableViewCell.swift */,
 				D242C68F25E5278C00215AE5 /* SimpleTableViewCell.xib */,
+				D242C6B925E5451F00215AE5 /* ReactionTableViewCell.swift */,
+				D242C6BA25E5451F00215AE5 /* ReactionTableViewCell.xib */,
+				D242C6BE25E5494000215AE5 /* ImageTableViewCell.swift */,
+				D242C6BF25E5494000215AE5 /* ImageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,8 +228,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D242C6C125E5494000215AE5 /* ImageTableViewCell.xib in Resources */,
 				D2598A9B25E101FB00D397D8 /* LaunchScreen.storyboard in Resources */,
 				D2598A9825E101FB00D397D8 /* Assets.xcassets in Resources */,
+				D242C6BC25E5451F00215AE5 /* ReactionTableViewCell.xib in Resources */,
 				D242C69125E5278C00215AE5 /* SimpleTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,11 +288,13 @@
 				D2451A0925E10FAE0066E528 /* DataModel.swift in Sources */,
 				D2598A9325E101F700D397D8 /* ViewController.swift in Sources */,
 				D2451A0D25E1802C0066E528 /* LikeButtonPressedProtocol.swift in Sources */,
+				D242C6C025E5494000215AE5 /* ImageTableViewCell.swift in Sources */,
 				D242C68325E4FF1D00215AE5 /* Constants.swift in Sources */,
 				D2598A8F25E101F700D397D8 /* AppDelegate.swift in Sources */,
 				D2451A1E25E390590066E528 /* UITableViewExtension.swift in Sources */,
 				D242C69025E5278C00215AE5 /* SimpleTableViewCell.swift in Sources */,
 				D2598A9125E101F700D397D8 /* SceneDelegate.swift in Sources */,
+				D242C6BB25E5451F00215AE5 /* ReactionTableViewCell.swift in Sources */,
 				D2451A2125E390870066E528 /* ReuseViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

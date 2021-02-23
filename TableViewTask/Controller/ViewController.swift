@@ -12,16 +12,16 @@ class ViewController: UITableViewController {
         DataModel(
             avatarImage: UIImage(named: "avatar"),
             image: nil,
-            status: nil,
-            nickName: "Bella",
+            reaction : nil,
+            nickName: "KurKing",
             text: "Lorem ipsum dolor sit amet",
             time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
             likesCount: Int.random(in: 0...999)),
         DataModel(
             avatarImage: UIImage(named: "avatar"),
             image: nil,
-            status: "💪",
-            nickName: "Leo",
+            reaction : "💪",
+            nickName: "KurKing",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
             likesCount: 1234
@@ -29,8 +29,8 @@ class ViewController: UITableViewController {
         DataModel(
             avatarImage: UIImage(named: "avatar"),
             image: UIImage(named: "anImage"),
-            status: nil,
-            nickName: "Charlie",
+            reaction : nil,
+            nickName: "KurKing",
             text: "Lorem ipsum dolor sit amet",
             time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
             likesCount: 2000000
@@ -41,8 +41,8 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.registerCell(SimpleTableViewCell.self)
-        //        tableView.registerCell(ImageTableViewCell.self)
-        //        tableView.registerCell(ReactionTableViewCell.self)
+                tableView.registerCell(ImageTableViewCell.self)
+        tableView.registerCell(ReactionTableViewCell.self)
         
         if let backgroundImage = UIImage(named: "bg"){
             tableView.backgroundView = UIImageView(image: backgroundImage)
@@ -69,28 +69,28 @@ extension ViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //        if data[indexPath.row].status != nil {
-        //            let cell: ReactionTableViewCell = tableView.dequeueReusableCell()
-        //
-        //            cell.setup(model: data[indexPath.row], index: indexPath)
-        //            cell.delagate = self
-        //
-        //            return cell
-        //        } else if data[indexPath.row].image == nil {
-        let cell: SimpleTableViewCell = tableView.dequeueReusableCell()
-        
-        cell.setInfo(model: data[indexPath.row], indexPath: indexPath)
-        cell.delegate = self
-        
-        return cell
-        //        } else {
-        //            let cell: ImageTableViewCell = tableView.dequeueReusableCell()
-        //
-        //            cell.setup(model: data[indexPath.row], index: indexPath)
-        //            cell.delagate = self
-        //
-        //            return cell
-        //        }
+        if data[indexPath.row].reaction  != nil {
+            let cell: ReactionTableViewCell = tableView.dequeueReusableCell()
+            
+            cell.setInfo(model: data[indexPath.row], indexPath: indexPath)
+            cell.delegate = self
+            
+            return cell
+        } else if data[indexPath.row].image == nil {
+            let cell: SimpleTableViewCell = tableView.dequeueReusableCell()
+            
+            cell.setInfo(model: data[indexPath.row], indexPath: indexPath)
+            cell.delegate = self
+            
+            return cell
+        } else {
+            let cell: ImageTableViewCell = tableView.dequeueReusableCell()
+            
+            cell.setInfo(model: data[indexPath.row], indexPath: indexPath)
+            cell.delegate = self
+            
+            return cell
+        }
     }
 }
 

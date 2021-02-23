@@ -31,7 +31,7 @@ class ViewController: UITableViewController {
             image: UIImage(named: "anImage"),
             reaction : nil,
             nickName: "KurKing",
-            text: "Lorem ipsum dolor sit amet",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
             likesCount: 2000000
         )

@@ -65,11 +65,11 @@
                                     <constraint firstAttribute="height" constant="1" id="6ie-zH-7wY"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TrB-r6-e51">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TrB-r6-e51">
                                 <rect key="frame" x="10" y="60" width="40" height="53"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84P-tB-tnY">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="ZFt-zy-8Wu"/>
                                             <constraint firstAttribute="height" constant="40" id="lUb-3S-lEC"/>
@@ -91,6 +91,7 @@
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="84P-tB-tnY" firstAttribute="centerX" secondItem="TrB-r6-e51" secondAttribute="centerX" id="KYq-wC-VEM"/>
                                     <constraint firstAttribute="width" constant="40" id="nJe-J1-Evy"/>
                                     <constraint firstAttribute="height" constant="53" id="nNy-rl-Y3t"/>
                                 </constraints>

@@ -9,5 +9,5 @@ import UIKit
 
 struct Constants {
     static let cellCornerRadius: CGFloat = 10
-    static let cellImageCornerRadius: CGFloat = 5
+    static let cellImageCornerRadius: CGFloat = 7
 }

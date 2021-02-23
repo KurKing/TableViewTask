@@ -20,6 +20,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEV-ef-X8H">
                         <rect key="frame" x="10" y="10" width="536" height="164"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zN-Ln-neS">
+                                <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0n2-8d-6ay"/>
+                                    <constraint firstAttribute="width" constant="40" id="UWj-u4-dHU"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="dx5-3b-wbW">
                                 <rect key="frame" x="10" y="11.5" width="40" height="37.5"/>
                                 <constraints>
@@ -123,6 +131,7 @@
                             <constraint firstItem="5sb-bA-whX" firstAttribute="top" secondItem="lTo-Db-11r" secondAttribute="bottom" constant="7" id="CDv-gr-3vd"/>
                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="mr2-j6-dqy" secondAttribute="bottom" constant="10" id="FhV-tJ-L1Z"/>
                             <constraint firstItem="lTo-Db-11r" firstAttribute="top" secondItem="CEV-ef-X8H" secondAttribute="top" constant="10" id="Keu-Cs-cZC"/>
+                            <constraint firstItem="6zN-Ln-neS" firstAttribute="top" secondItem="CEV-ef-X8H" secondAttribute="top" constant="10" id="QwL-wd-ThR"/>
                             <constraint firstItem="TrB-r6-e51" firstAttribute="leading" secondItem="CEV-ef-X8H" secondAttribute="leading" constant="10" id="fg6-su-AKD"/>
                             <constraint firstItem="kIR-hg-zui" firstAttribute="leading" secondItem="mr2-j6-dqy" secondAttribute="trailing" constant="10" id="fpN-MN-ddi"/>
                             <constraint firstAttribute="trailing" secondItem="5sb-bA-whX" secondAttribute="trailing" constant="10" id="jLf-hE-Ape"/>
@@ -131,6 +140,7 @@
                             <constraint firstItem="kIR-hg-zui" firstAttribute="top" secondItem="5sb-bA-whX" secondAttribute="bottom" constant="10" id="kVb-Zf-MP0"/>
                             <constraint firstItem="dx5-3b-wbW" firstAttribute="leading" secondItem="CEV-ef-X8H" secondAttribute="leading" constant="10" id="n0N-2X-yRz"/>
                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="TrB-r6-e51" secondAttribute="bottom" constant="10" id="rUg-yR-7CZ"/>
+                            <constraint firstItem="6zN-Ln-neS" firstAttribute="leading" secondItem="CEV-ef-X8H" secondAttribute="leading" constant="10" id="sWd-gx-qqT"/>
                             <constraint firstItem="lTo-Db-11r" firstAttribute="leading" secondItem="dx5-3b-wbW" secondAttribute="trailing" constant="10" id="tmy-Gr-RxE"/>
                             <constraint firstItem="TrB-r6-e51" firstAttribute="top" secondItem="dx5-3b-wbW" secondAttribute="bottom" constant="10" id="wVM-qz-39S"/>
                             <constraint firstItem="mr2-j6-dqy" firstAttribute="leading" secondItem="TrB-r6-e51" secondAttribute="trailing" constant="10" id="y41-V6-pNi"/>
@@ -148,6 +158,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="avatarImage" destination="dx5-3b-wbW" id="mZG-AT-dhE"/>
+                <outlet property="avatarImageShadow" destination="6zN-Ln-neS" id="PcW-Ln-vhq"/>
                 <outlet property="cellBackgroundView" destination="CEV-ef-X8H" id="KYX-Et-EkM"/>
                 <outlet property="commentLabel" destination="mr2-j6-dqy" id="JI0-Hy-SJw"/>
                 <outlet property="dateLabel" destination="4RO-sj-qAZ" id="S23-lc-zlW"/>
@@ -161,6 +172,9 @@
     </objects>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

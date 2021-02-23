@@ -14,6 +14,7 @@ class SimpleTableViewCell: UITableViewCell {
     
     //MARK: - IBOutlets / IBActions
     @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var avatarImageShadow: UIView!
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
@@ -49,6 +50,9 @@ class SimpleTableViewCell: UITableViewCell {
         addShadow(view: cellBackgroundView, opacity: 0.4, x: 2, y: 3, radius: 6)
         
         avatarImage.layer.cornerRadius = avatarImage.bounds.height / 2
+        avatarImageShadow.layer.cornerRadius = avatarImage.bounds.height / 2
+        addShadow(view: avatarImageShadow, opacity: 0.3, x: 1, y: 2, radius: 4)
+        
     }
     
     func addShadow(view: UIView, opacity: Float, x: Int, y: Int, radius: CGFloat){

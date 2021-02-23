@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,6 +20,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2c-yN-ONI">
                         <rect key="frame" x="10" y="10" width="528" height="313"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSG-L4-r7V">
+                                <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="82G-Gh-2cP"/>
+                                    <constraint firstAttribute="height" constant="40" id="uhJ-Gy-CTd"/>
+                                </constraints>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gIQ-L0-GbW">
                                 <rect key="frame" x="10" y="11.5" width="40" height="37.5"/>
                                 <constraints>
@@ -107,6 +116,7 @@
                             <constraint firstAttribute="trailing" secondItem="RM0-Tq-Rf6" secondAttribute="trailing" constant="10" id="MOS-l5-IYD"/>
                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="1eE-hv-k0y" secondAttribute="bottom" constant="10" id="Mhn-Z6-Zu8"/>
                             <constraint firstAttribute="trailing" secondItem="4e4-Zh-z6v" secondAttribute="trailing" constant="10" id="Qo2-Pk-Zot"/>
+                            <constraint firstItem="tSG-L4-r7V" firstAttribute="top" secondItem="w2c-yN-ONI" secondAttribute="top" constant="10" id="c0o-eu-2zX"/>
                             <constraint firstItem="3KX-dM-p0R" firstAttribute="top" secondItem="4e4-Zh-z6v" secondAttribute="bottom" constant="10" id="gVh-Sm-dfD"/>
                             <constraint firstItem="O6U-p7-MrC" firstAttribute="leading" secondItem="gIQ-L0-GbW" secondAttribute="trailing" constant="10" id="hKw-97-jbI"/>
                             <constraint firstItem="RM0-Tq-Rf6" firstAttribute="leading" secondItem="1eE-hv-k0y" secondAttribute="trailing" constant="10" id="hO6-ke-HF8"/>
@@ -118,6 +128,7 @@
                             <constraint firstItem="RM0-Tq-Rf6" firstAttribute="top" secondItem="3KX-dM-p0R" secondAttribute="bottom" constant="10" id="uqS-Sm-Vbr"/>
                             <constraint firstItem="O6U-p7-MrC" firstAttribute="top" secondItem="w2c-yN-ONI" secondAttribute="top" constant="10" id="vLp-pv-daH"/>
                             <constraint firstItem="4e4-Zh-z6v" firstAttribute="top" secondItem="O6U-p7-MrC" secondAttribute="bottom" constant="7" id="wIZ-fX-gAi"/>
+                            <constraint firstItem="tSG-L4-r7V" firstAttribute="leading" secondItem="w2c-yN-ONI" secondAttribute="leading" constant="10" id="zSq-6X-hEd"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -132,6 +143,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="avatarImage" destination="gIQ-L0-GbW" id="k9Y-lj-xjp"/>
+                <outlet property="avatarImageShadow" destination="tSG-L4-r7V" id="8Ne-ML-TCE"/>
                 <outlet property="bigImageView" destination="RM0-Tq-Rf6" id="Rur-3V-hJ0"/>
                 <outlet property="cellBackgroundView" destination="w2c-yN-ONI" id="iOe-UN-WHh"/>
                 <outlet property="commentLabel" destination="3KX-dM-p0R" id="upG-pd-KWN"/>
@@ -145,5 +157,8 @@
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="timelapse" catalog="system" width="128" height="122"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

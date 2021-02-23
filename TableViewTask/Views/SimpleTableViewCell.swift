@@ -31,7 +31,11 @@ class SimpleTableViewCell: UITableViewCell {
     func setInfo(model: DataModel, indexPath: IndexPath){
         avatarImage.image = model.avatarImage
         nickNameLabel.text = model.nickName
-        dateLabel.text = model.time
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        dateLabel.text = formatter.string(from: model.date)
+        
         commentLabel.text = model.text
         
         if model.likesCount > 1000000 {

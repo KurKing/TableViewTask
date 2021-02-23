@@ -15,7 +15,7 @@ class ViewController: UITableViewController {
             reaction : nil,
             nickName: "KurKing",
             text: "Lorem ipsum dolor sit amet",
-            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
+            date: Date(),
             likesCount: Int.random(in: 0...999)),
         DataModel(
             avatarImage: UIImage(named: "avatar"),
@@ -23,7 +23,7 @@ class ViewController: UITableViewController {
             reaction : "💪",
             nickName: "KurKing",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
+            date: Date(),
             likesCount: 1234
         ),
         DataModel(
@@ -32,7 +32,7 @@ class ViewController: UITableViewController {
             reaction : nil,
             nickName: "KurKing",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            time: "\(Int.random(in: 10...12)):\(Int.random(in: 10...59)) Uhr",
+            date: Date(),
             likesCount: 2000000
         )
     ]

@@ -16,7 +16,7 @@ struct DataModel {
     
     let nickName: String
     let text: String
-    let time: String
+    let date: Date
     
     var likesCount: Int
 }

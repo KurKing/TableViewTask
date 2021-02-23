@@ -5,8 +5,8 @@
 //  Created by Oleksiy on 23.02.2021.
 //
 
-import Foundation
+import UIKit
 
 struct Constants {
-    
+    static let cellCornerRadius: CGFloat = 10
 }

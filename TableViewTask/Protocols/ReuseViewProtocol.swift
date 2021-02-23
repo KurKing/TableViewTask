@@ -20,3 +20,16 @@ extension ReusableCell where Self: UIView {
 extension UITableViewCell: ReusableCell {
 }
 
+protocol NibLoadableView: class {
+    static var nibName: String { get }
+}
+
+extension NibLoadableView where Self: UIView {
+    static var nibName: String {
+        return String(NSStringFromClass(self).split(separator: ".").last!)
+    }
+}
+
+extension SimpleTableViewCell: NibLoadableView {
+}
+

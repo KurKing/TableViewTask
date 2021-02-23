@@ -57,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D242C6C725E56DF600215AE5 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				D242C68F25E5278C00215AE5 /* SimpleTableViewCell.xib */,
+				D242C6BA25E5451F00215AE5 /* ReactionTableViewCell.xib */,
+				D242C6BF25E5494000215AE5 /* ImageTableViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		D2451A0725E10F800066E528 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,11 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				D242C68E25E5278C00215AE5 /* SimpleTableViewCell.swift */,
-				D242C68F25E5278C00215AE5 /* SimpleTableViewCell.xib */,
 				D242C6B925E5451F00215AE5 /* ReactionTableViewCell.swift */,
-				D242C6BA25E5451F00215AE5 /* ReactionTableViewCell.xib */,
 				D242C6BE25E5494000215AE5 /* ImageTableViewCell.swift */,
-				D242C6BF25E5494000215AE5 /* ImageTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 				D2598AA925E103B500D397D8 /* Application */,
 				D2451A0725E10F800066E528 /* Model */,
 				D2451A1425E194B50066E528 /* Views */,
+				D242C6C725E56DF600215AE5 /* Xib */,
 				D2451A1225E194AB0066E528 /* Controller */,
 				D2451A1025E194A40066E528 /* Protocols */,
 				D2598AA625E1039700D397D8 /* Supporting Files */,

@@ -23,6 +23,7 @@
 		D2598A9825E101FB00D397D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2598A9725E101FB00D397D8 /* Assets.xcassets */; };
 		D2598A9B25E101FB00D397D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2598A9925E101FB00D397D8 /* LaunchScreen.storyboard */; };
 		D29D1DB425E9946D00FDBC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29D1DB325E9946D00FDBC34 /* Main.storyboard */; };
+		D29D1DBA25E9979100FDBC34 /* CellsSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29D1DB925E9979100FDBC34 /* CellsSetupProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D2598A9A25E101FB00D397D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2598A9C25E101FB00D397D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D29D1DB325E9946D00FDBC34 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D29D1DB925E9979100FDBC34 /* CellsSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsSetupProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				D2451A0C25E1802C0066E528 /* LikeButtonPressedProtocol.swift */,
 				D2451A2025E390870066E528 /* ReuseViewProtocol.swift */,
+				D29D1DB925E9979100FDBC34 /* CellsSetupProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29D1DBA25E9979100FDBC34 /* CellsSetupProtocol.swift in Sources */,
 				D2451A0925E10FAE0066E528 /* DataModel.swift in Sources */,
 				D2598A9325E101F700D397D8 /* ViewController.swift in Sources */,
 				D2451A0D25E1802C0066E528 /* LikeButtonPressedProtocol.swift in Sources */,

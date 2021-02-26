@@ -67,29 +67,20 @@ extension ViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: CellsSetupProtocol?
         
         if data[indexPath.row].reaction  != nil {
-            let cell: ReactionTableViewCell = tableView.dequeueReusableCell()
-            
-            cell.setInfo(model: data[indexPath.row], indexPath: indexPath)
-            cell.delegate = self
-            
-            return cell
+            cell = tableView.dequeueReusableCell(type: ReactionTableViewCell.self)
         } else if data[indexPath.row].image == nil {
-            let cell: SimpleTableViewCell = tableView.dequeueReusableCell()
-            
-            cell.setInfo(model: data[indexPath.row], indexPath: indexPath)
-            cell.delegate = self
-            
-            return cell
+            cell = tableView.dequeueReusableCell(type: SimpleTableViewCell.self)
         } else {
-            let cell: ImageTableViewCell = tableView.dequeueReusableCell()
-            
-            cell.setInfo(model: data[indexPath.row], indexPath: indexPath)
-            cell.delegate = self
-            
-            return cell
+            cell = tableView.dequeueReusableCell(type: ImageTableViewCell.self)
         }
+        
+        cell?.setInfo(model: data[indexPath.row], indexPath: indexPath)
+        cell?.delegate = self
+        
+        return cell as? UITableViewCell ?? UITableViewCell()
     }
 }
 

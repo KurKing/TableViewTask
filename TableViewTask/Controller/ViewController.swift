@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    
+    // TODO
     private(set) var data = [
         DataModel(
             avatarImage: UIImage(named: "avatar"),

@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
+    
     private(set) var data = [
         DataModel(
             avatarImage: UIImage(named: "avatar"),
@@ -43,13 +44,11 @@ class ViewController: UITableViewController {
         tableView.registerCell(SimpleTableViewCell.self)
                 tableView.registerCell(ImageTableViewCell.self)
         tableView.registerCell(ReactionTableViewCell.self)
+        tableView.registerCell(UITableViewCell.self)
         
         if let backgroundImage = UIImage(named: "bg"){
             tableView.backgroundView = UIImageView(image: backgroundImage)
         }
-        
-        tableView.separatorStyle = .none
-        tableView.delaysContentTouches = false
     }
 }
 

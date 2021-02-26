@@ -28,11 +28,11 @@ extension NibLoadableView where Self: UIView {
     static var nibName: String {
         let name = NSStringFromClass(self)
                         .split(separator: ".")
-                        .last!
+                        .last ?? "default"
         return String(name)
     }
 }
 
-extension SimpleTableViewCell: NibLoadableView {
+extension UITableViewCell: NibLoadableView {
 }
 

@@ -22,6 +22,7 @@
 		D2598A9325E101F700D397D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2598A9225E101F700D397D8 /* ViewController.swift */; };
 		D2598A9825E101FB00D397D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2598A9725E101FB00D397D8 /* Assets.xcassets */; };
 		D2598A9B25E101FB00D397D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2598A9925E101FB00D397D8 /* LaunchScreen.storyboard */; };
+		D29D1DB425E9946D00FDBC34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29D1DB325E9946D00FDBC34 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D2598A9725E101FB00D397D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2598A9A25E101FB00D397D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2598A9C25E101FB00D397D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D29D1DB325E9946D00FDBC34 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				D242C68F25E5278C00215AE5 /* SimpleTableViewCell.xib */,
 				D242C6BA25E5451F00215AE5 /* ReactionTableViewCell.xib */,
 				D242C6BF25E5494000215AE5 /* ImageTableViewCell.xib */,
+				D29D1DB325E9946D00FDBC34 /* Main.storyboard */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29D1DB425E9946D00FDBC34 /* Main.storyboard in Resources */,
 				D242C6C125E5494000215AE5 /* ImageTableViewCell.xib in Resources */,
 				D2598A9B25E101FB00D397D8 /* LaunchScreen.storyboard in Resources */,
 				D2598A9825E101FB00D397D8 /* Assets.xcassets in Resources */,

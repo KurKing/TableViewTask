@@ -26,7 +26,10 @@ protocol NibLoadableView: class {
 
 extension NibLoadableView where Self: UIView {
     static var nibName: String {
-        return String(NSStringFromClass(self).split(separator: ".").last!)
+        let name = NSStringFromClass(self)
+                        .split(separator: ".")
+                        .last!
+        return String(name)
     }
 }
 

@@ -10,7 +10,10 @@ import UIKit
 extension UITableView {
     
     func registerCell<T: UITableViewCell>(_: T.Type) where T: ReusableCell, T: NibLoadableView {
-        register(UINib(nibName: T.nibName, bundle: Bundle(for: T.self)), forCellReuseIdentifier: T.defaultReuseIdentifier)        
+        let bundle = Bundle(for: T.self)
+        let nib = UINib(nibName: T.nibName, bundle: bundle)
+        
+        register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
  
     func dequeueReusableCell<T: UITableViewCell>() -> T where T: ReusableCell {

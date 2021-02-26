@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UITableViewController {
-    fileprivate(set) var data = [
+    private(set) var data = [
         DataModel(
             avatarImage: UIImage(named: "avatar"),
             image: nil,
@@ -47,8 +47,8 @@ class ViewController: UITableViewController {
         if let backgroundImage = UIImage(named: "bg"){
             tableView.backgroundView = UIImageView(image: backgroundImage)
         }
-        tableView.separatorStyle = .none
         
+        tableView.separatorStyle = .none
         tableView.delaysContentTouches = false
     }
 }

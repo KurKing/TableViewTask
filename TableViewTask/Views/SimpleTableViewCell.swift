@@ -12,8 +12,13 @@ class SimpleTableViewCell: UITableViewCell {
     var indexPath: IndexPath?
     weak var delegate: LikeButtonPressed?
     
+    struct Constants {
+        static let cellCornerRadius: CGFloat = 10
+        static let cellImageCornerRadius: CGFloat = 7
+    }
+    
     //MARK: - IBOutlets / IBActions
-    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var avatarImageShadow: UIView!
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -29,7 +34,7 @@ class SimpleTableViewCell: UITableViewCell {
     
     //MARK: - Setup functions
     func setInfo(model: DataModel, indexPath: IndexPath){
-        avatarImage.image = model.avatarImage
+        avatarImageView.image = model.avatarImage
         nickNameLabel.text = model.nickName
         
         let formatter = DateFormatter()
@@ -53,8 +58,8 @@ class SimpleTableViewCell: UITableViewCell {
         cellBackgroundView.layer.cornerRadius = Constants.cellCornerRadius
         addShadow(view: cellBackgroundView, opacity: 0.4, x: 2, y: 3, radius: 6)
         
-        avatarImage.layer.cornerRadius = avatarImage.bounds.height / 2
-        avatarImageShadow.layer.cornerRadius = avatarImage.bounds.height / 2
+        avatarImageView.layer.cornerRadius = avatarImageView.bounds.height / 2
+        avatarImageShadow.layer.cornerRadius = avatarImageView.bounds.height / 2
         addShadow(view: avatarImageShadow, opacity: 0.3, x: 1, y: 2, radius: 4)
         
     }

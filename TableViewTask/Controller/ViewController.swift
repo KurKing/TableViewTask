@@ -42,10 +42,8 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.registerCell(SimpleTableViewCell.self)
-                tableView.registerCell(ImageTableViewCell.self)
-        tableView.registerCell(ReactionTableViewCell.self)
-        tableView.registerCell(UITableViewCell.self)
-        
+//        tableView.registerCell(ImageTableViewCell.self)
+//        tableView.registerCell(ReactionTableViewCell.self)        
         if let backgroundImage = UIImage(named: "bg"){
             tableView.backgroundView = UIImageView(image: backgroundImage)
         }
@@ -69,13 +67,15 @@ extension ViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: CellsSetupProtocol?
         
-        if data[indexPath.row].reaction  != nil {
-            cell = tableView.dequeueReusableCell(type: ReactionTableViewCell.self)
-        } else if data[indexPath.row].image == nil {
-            cell = tableView.dequeueReusableCell(type: SimpleTableViewCell.self)
-        } else {
-            cell = tableView.dequeueReusableCell(type: ImageTableViewCell.self)
-        }
+//        if data[indexPath.row].reaction  != nil {
+//            cell = tableView.dequeueReusableCell(type: ReactionTableViewCell.self)
+//        } else if data[indexPath.row].image == nil {
+//            cell = tableView.dequeueReusableCell(type: SimpleTableViewCell.self)
+//        } else {
+//            cell = tableView.dequeueReusableCell(type: ImageTableViewCell.self)
+//        }
+        
+        cell = tableView.dequeueReusableCell(type: SimpleTableViewCell.self)
         
         cell?.setInfo(model: data[indexPath.row], indexPath: indexPath)
         cell?.delegate = self

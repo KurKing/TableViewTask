@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SimpleTableViewCell: UITableViewCell, CellsSetupProtocol {
+class SimpleTableViewCell: UITableViewCell {
     
     var indexPath: IndexPath?
     weak var delegate: LikeButtonPressed?

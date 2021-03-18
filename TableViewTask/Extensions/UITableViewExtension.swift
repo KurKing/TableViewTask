@@ -10,9 +10,7 @@ import UIKit
 extension UITableView {
     
     func registerCell<T: UITableViewCell>(_: T.Type) where T: ReusableCell, T: NibLoadableView {
-        let bundle = Bundle(for: T.self)
-        let nib = UINib(nibName: T.nibName, bundle: bundle)
-        
+        let nib = UINib(nibName: T.nibName, bundle: Bundle(for: T.self))
         register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
  
